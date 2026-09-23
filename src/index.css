@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ocultar la barra de scroll (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ocultar la barra de scroll (Firefox) */
+html {
+  scrollbar-width: none;
+}
+
+/* Ocultar la barra de scroll (IE/Edge viejo) */
+body {
+  -ms-overflow-style: none;
+}
