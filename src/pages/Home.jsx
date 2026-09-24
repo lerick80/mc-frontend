@@ -195,7 +195,7 @@ export default function Home() {
                         <p className="text-[#523324]">{hora}</p>
                       </div>
                     ) : (
-                      <img src={`/images/${icono}.png`} alt={evento} className="w-16 h-16 object-contain" />
+                      <img src={`/images/icons/${icono}.png`} alt={evento} className="w-16 h-16 object-contain" />
                     )}
                   </div>
 
