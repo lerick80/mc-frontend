@@ -362,7 +362,7 @@ export default function Home() {
       </section>
 
       <footer className="py-10 text-center">
-        <p className="text-3xl text-[#aa5532]" style={{ fontFamily: "Great Vibes" }}>Carlos & Magali</p>
+        <p className="text-3xl text-[#aa5532]" style={{ fontFamily: "Great Vibes" }}>Magali & Carlos</p>
         <p className="mt-4 text-xs text-[#a98b5f]">© Powered by Erick LG</p>
       </footer>
 
