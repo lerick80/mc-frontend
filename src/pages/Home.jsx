@@ -16,6 +16,12 @@ import drink from "../images/drink.png";
 import door from "../images/door.png";
 import restaurant from "../images/restaurant.png";
 
+import foto1 from "../images/galeria/CarlosMagali.jpg";
+import foto2 from "../images/galeria/CarlosMagali2.jpg";
+import foto3 from "../images/galeria/CarlosMagali3.jpg";
+import foto4 from "../images/galeria/CarlosMagali4.jpg";
+import foto5 from "../images/galeria/CarlosMagali5.jpg";
+
 const API = import.meta.env.VITE_API_URL;
 
 export default function Home() {
@@ -24,7 +30,7 @@ export default function Home() {
   const [openGifts, setOpenGifts] = useState(false);
   const [opened, setOpened] = useState(false);
   const [guest, setGuest] = useState(null);
-  const fotos = ["CarlosMagali.jpg", "CarlosMagali2.jpg", "CarlosMagali3.jpg", "CarlosMagali4.jpg", "CarlosMagali5.jpg"];
+  const fotos = [foto1, foto2, foto3, foto4, foto5];
   const audioRef = useRef(null);
   const [sonando, setSonando] = useState(true);
 
@@ -185,7 +191,7 @@ export default function Home() {
             <div className="absolute left-1/2 top-0 bottom-0 w-px bg-[#4a4038] -translate-x-1/2"></div>
 
             {[
-              ["5:30 P.M.", "cheers", cheers],
+              ["5:30 P.M.", "cheers ", cheers],
               ["6:30 P.M.", "Recepción y Cóctel", drink],
               ["7:00 P.M.", "Ingreso", door],
               ["7:30 P.M.", "Cena", restaurant],
@@ -238,7 +244,7 @@ export default function Home() {
 
           <div className="relative">
             <img
-              src={`/images/galeria/${fotos[fotoActual]}`}
+              src={fotos[fotoActual]}
               alt={`Foto ${fotoActual + 1}`}
               className="w-full aspect-[4/5] object-cover"
             />
