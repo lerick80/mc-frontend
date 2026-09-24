@@ -195,7 +195,7 @@ export default function Home() {
                         <p className="text-[#523324]">{hora}</p>
                       </div>
                     ) : (
-                      <img src={`/public/images/${icono}.png`} alt={evento} className="w-16 h-16 object-contain" />
+                      <img src={`/images/${icono}.png`} alt={evento} className="w-16 h-16 object-contain" />
                     )}
                   </div>
 
@@ -203,7 +203,7 @@ export default function Home() {
 
                   <div className="w-[42%] flex justify-start">
                     {textoIzquierda ? (
-                      <img src={`/public/images/${icono}.png`} alt={evento} className="w-16 h-16 object-contain" />
+                      <img src={`/images/${icono}.png`} alt={evento} className="w-16 h-16 object-contain" />
                     ) : (
                       <div className="text-left">
                         <p className="text-lg text-[#c98a5e]" style={{ fontFamily: "Cormorant Garamond" }}>{evento}</p>
@@ -233,7 +233,7 @@ export default function Home() {
 
           <div className="relative">
             <img
-              src={`/public/images/${fotos[fotoActual]}`}
+              src={`/images/${fotos[fotoActual]}`}
               alt={`Foto ${fotoActual + 1}`}
               className="w-full aspect-[4/5] object-cover"
             />
