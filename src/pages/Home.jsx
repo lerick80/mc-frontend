@@ -16,11 +16,11 @@ import drink from "../images/drink.png";
 import door from "../images/door.png";
 import restaurant from "../images/restaurant.png";
 
-import foto1 from "../images/galeria/CarlosMagali.jpg";
-import foto2 from "../images/galeria/CarlosMagali2.jpg";
-import foto3 from "../images/galeria/CarlosMagali3.jpg";
-import foto4 from "../images/galeria/CarlosMagali4.jpg";
-import foto5 from "../images/galeria/CarlosMagali5.jpg";
+import foto1 from "../imagesCarlosMagali.jpg";
+import foto2 from "../imagesCarlosMagali2.jpg";
+import foto3 from "../imagesCarlosMagali3.jpg";
+import foto4 from "../imagesCarlosMagali4.jpg";
+import foto5 from "../imagesCarlosMagali5.jpg";
 
 const API = import.meta.env.VITE_API_URL;
 
