@@ -185,7 +185,7 @@ export default function Home() {
             <div className="absolute left-1/2 top-0 bottom-0 w-px bg-[#4a4038] -translate-x-1/2"></div>
 
             {[
-              ["5:30 P.M.", "Ceremonia", anillos],
+              ["5:30 P.M.", "Ceremonia", cheers],
               ["6:30 P.M.", "Recepción y Cóctel", drink],
               ["7:00 P.M.", "Ingreso", door],
               ["7:30 P.M.", "Cena", restaurant],
