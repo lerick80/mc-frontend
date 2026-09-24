@@ -12,11 +12,11 @@ const LINEA_PLIEGUE = "rgba(0, 0, 0, 0.0)";
 const SOMBRA_SOLAPA = "rgba(70, 20, 10, 0.20)";
 
 // Posiciones
-const CX = 42;
-const CY = 46;
+const CX = 50;
+const CY = 50;
 
-const TOPX = 68;
-const BOTX = 68;
+const TOPX = 65;
+const BOTX = 35;
 
 export default function Sobre({ open, onOpen }) {
   const [abriendo, setAbriendo] = useState(false);
