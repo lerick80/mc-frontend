@@ -16,11 +16,11 @@ import drink from "../images/drink.png";
 import door from "../images/door.png";
 import restaurant from "../images/restaurant.png";
 
-import foto1 from "../imagesCarlosMagali.jpg";
-import foto2 from "../imagesCarlosMagali2.jpg";
-import foto3 from "../imagesCarlosMagali3.jpg";
-import foto4 from "../imagesCarlosMagali4.jpg";
-import foto5 from "../imagesCarlosMagali5.jpg";
+import foto1 from "../images/CarlosMagali.jpg";
+import foto2 from "../images/CarlosMagali2.jpg";
+import foto3 from "../images/CarlosMagali3.jpg";
+import foto4 from "../images/CarlosMagali4.jpg";
+import foto5 from "../images/CarlosMagali5.jpg";
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -191,7 +191,7 @@ export default function Home() {
             <div className="absolute left-1/2 top-0 bottom-0 w-px bg-[#4a4038] -translate-x-1/2"></div>
 
             {[
-              ["5:30 P.M.", "cheers ", cheers],
+              ["5:30 P.M.", "Ceremonia", anillos],
               ["6:30 P.M.", "Recepción y Cóctel", drink],
               ["7:00 P.M.", "Ingreso", door],
               ["7:30 P.M.", "Cena", restaurant],
