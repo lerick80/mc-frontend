@@ -176,19 +176,21 @@ export default function Home() {
       </section>
 
       {/* ceremonia */}
-      <section id="evento" className="py-14 px-6 text-center max-w-md mx-auto">
+      <section id="evento" className="relative overflow-hidden py-14 px-6 text-center max-w-md mx-auto">
         <img
           src={florAbajo}
           alt=""
           className="absolute -top-10 -right-14 w-48 md:w-60 pointer-events-none select-none z-0"
         />
         <FadeIn>
-          <img src={church} alt="iglesia" className="w-18 h-auto mx-auto mb-3" />
-          <h2 className="text-lg tracking-widest uppercase text-[#d86f3a] font-medium">Parroquia de la Merced</h2>
-          <p className="text-[#4a4038] mt-2">Av. J. M. Morelos Y P. 812, Barrio de la Merced, 50080 Toluca de Lerdo, Méx.</p>
-          <a href="https://maps.app.goo.gl/t8yMU7UJqenibN5x7" target="_blank" rel="noopener noreferrer" className="inline-block mt-5 px-6 py-2 rounded-full bg-[#a74e2a] text-white text-xs tracking-widest uppercase">
-            Ver ubicación
-          </a>
+          <div className="relative z-10">
+            <img src={church} alt="iglesia" className="w-18 h-auto mx-auto mb-3" />
+            <h2 className="text-lg tracking-widest uppercase text-[#d86f3a] font-medium">Parroquia de la Merced</h2>
+            <p className="text-[#4a4038] mt-2">Av. J. M. Morelos Y P. 812, Barrio de la Merced, 50080 Toluca de Lerdo, Méx.</p>
+            <a href="https://maps.app.goo.gl/t8yMU7UJqenibN5x7" target="_blank" rel="noopener noreferrer" className="inline-block mt-5 px-6 py-2 rounded-full bg-[#a74e2a] text-white text-xs tracking-widest uppercase">
+              Ver ubicación
+            </a>
+          </div>
         </FadeIn>
       </section>
 
