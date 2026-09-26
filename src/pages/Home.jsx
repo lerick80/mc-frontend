@@ -23,7 +23,7 @@ import foto4 from "../images/CarlosMagali4.jpg";
 import foto5 from "../images/CarlosMagali5.jpg";
 
 import florArriba from "../images/flowers_up.png";
-import florAbajo from "../images/flowers_up.png";
+import florAbajo from "../images/flowers_down.png";
 
 const API = import.meta.env.VITE_API_URL;
 
