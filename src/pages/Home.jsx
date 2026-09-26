@@ -159,12 +159,6 @@ export default function Home() {
 
       {/* fecha grande */}
       <section className="relative overflow-hidden py-14 px-6 text-center max-w-md mx-auto">
-        <img
-          src={florAbajo}
-          alt=""
-          className="absolute -bottom-10 -right-14 w-48 md:w-60 pointer-events-none select-none z-0"
-        />
-
         <FadeIn>
           <div className="relative z-10 flex items-center justify-center gap-6">
             <div>
@@ -183,6 +177,11 @@ export default function Home() {
 
       {/* ceremonia */}
       <section id="evento" className="py-14 px-6 text-center max-w-md mx-auto">
+        <img
+          src={florAbajo}
+          alt=""
+          className="absolute -top-10 -right-14 w-48 md:w-60 pointer-events-none select-none z-0"
+        />
         <FadeIn>
           <img src={church} alt="iglesia" className="w-18 h-auto mx-auto mb-3" />
           <h2 className="text-lg tracking-widest uppercase text-[#d86f3a] font-medium">Parroquia de la Merced</h2>
