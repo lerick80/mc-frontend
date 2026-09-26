@@ -112,7 +112,7 @@ export default function Home() {
         <img
           src={florArriba}
           alt=""
-          className="absolute -top-4 -left-4 w-28 md:w-36 pointer-events-none select-none"
+          className="absolute -top-10 -left-14 w-48 md:w-60 pointer-events-none select-none"
         />
 
         <FadeIn>
