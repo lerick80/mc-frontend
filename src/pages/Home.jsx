@@ -22,6 +22,8 @@ import foto3 from "../images/CarlosMagali3.jpg";
 import foto4 from "../images/CarlosMagali4.jpg";
 import foto5 from "../images/CarlosMagali5.jpg";
 
+import florArriba from "../images/flowers_up.png";
+
 const API = import.meta.env.VITE_API_URL;
 
 export default function Home() {
@@ -106,7 +108,13 @@ export default function Home() {
       </section>*/}
 
       {/* Frase */}
-      <section className="py-5 px-21 text-center max-w-md mx-auto">
+      <section className="relative overflow-hidden py-16 px-21 text-center max-w-md mx-auto">
+        <img
+          src={florArriba}
+          alt=""
+          className="absolute -top-4 -left-4 w-28 md:w-36 pointer-events-none select-none"
+        />
+
         <FadeIn>
           <h3 className="text-s tracking-widest text-[#523324]">
             “De nadie seré, sólo de ti, hasta que mis huesos se vuelvan ceniza y mi corazón deje de latir.”
@@ -116,16 +124,16 @@ export default function Home() {
       </section>
 
       {/* padres */}
-      <section className="py-16 px-6 text-center max-w-md mx-auto">
+      <section className="py-10 px-6 text-center max-w-md mx-auto">
         <FadeIn>
           <h3 className="text-xs tracking-widest uppercase text-[#6e2c3a] mb-4">
             Con la bendición de Dios y en agradecimiento a nuestros padres
           </h3>
-          <p className="text-lg">Sonia González Cerritos</p>
-          <p className="text-lg">Sergio Pérez Orduña</p>
-          <br/>
-          <p className="text-lg mt-1">Josefina González Reyes</p>
-          <p className="text-lg">Florencio Rendón Hernández</p>
+          <p className="text-s text-[#523324]">Sonia González Cerritos</p>
+          <p className="text-s text-[#523324]">Sergio Pérez Orduña</p>
+          <br />
+          <p className="text-s text-[#523324]">Josefina González Reyes</p>
+          <p className="text-s text-[#523324]">Florencio Rendón Hernández</p>
         </FadeIn>
       </section>
 
