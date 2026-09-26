@@ -105,15 +105,15 @@ export default function Home() {
         </FadeIn>
       </section>*/}
 
-      {/* Frase 
+      {/* Frase */}
       <section className="py-5 px-21 text-center max-w-md mx-auto">
         <FadeIn>
           <h3 className="text-s tracking-widest text-[#523324]">
-            “Por tanto, lo que Dios ha unido, que no lo separe el hombre”.
+            “De. nadie seré, sólo de ti, hasta que mis huesos se vuelvan ceniza y mi corazón deje de latir.”
           </h3>
-          <p className="text-s tracking-widest text-[#523324]">Mateo 19:6</p>
+          <p className="text-s tracking-widest text-[#523324]">Pablo Neruda</p>
         </FadeIn>
-      </section>*/}
+      </section>
 
       {/* Nombres 
       <section id="inicio" className=" pb-1 px-8 flex flex-col items-center text-center">
@@ -191,7 +191,7 @@ export default function Home() {
             <div className="absolute left-1/2 top-0 bottom-0 w-px bg-[#4a4038] -translate-x-1/2"></div>
 
             {[
-              ["5:30 P.M.", "Ceremonia", anillos],
+              ["4:00 P.M.", "Ceremonia", anillos],
               ["6:30 P.M.", "Recepción y Cóctel", drink],
               ["7:00 P.M.", "Ingreso", door],
               ["7:30 P.M.", "Cena", restaurant],
@@ -291,7 +291,7 @@ export default function Home() {
           <h2 className="text-4xl text-[#aa5532] mb-3" style={{ fontFamily: "Great Vibes" }}>No niños</h2>
           <p className="text-[#523324] leading-relaxed">
             Nuestra boda tiene un código secreto: Adultos Solamente. Amamos a sus peques,
-            pero esta vez queremos ver a los papás dándolo todo e la pista de baile hasta el amanecer.
+            pero esta vez queremos ver a los papás dándolo todo en la pista de baile hasta el amanecer.
           </p>
           <br />
           <p className="text-[#523324] leading-relaxed">
