@@ -109,9 +109,22 @@ export default function Home() {
       <section className="py-5 px-21 text-center max-w-md mx-auto">
         <FadeIn>
           <h3 className="text-s tracking-widest text-[#523324]">
-            “De. nadie seré, sólo de ti, hasta que mis huesos se vuelvan ceniza y mi corazón deje de latir.”
+            “De nadie seré, sólo de ti, hasta que mis huesos se vuelvan ceniza y mi corazón deje de latir.”
           </h3>
           <p className="text-s tracking-widest text-[#523324]">Pablo Neruda</p>
+        </FadeIn>
+      </section>
+
+      {/* padres */}
+      <section className="py-16 px-6 text-center max-w-md mx-auto border-t border-[#e4d8c6]">
+        <FadeIn>
+          <h3 className="text-xs tracking-widest uppercase text-[#6e2c3a] mb-4">
+            Con la bendición de Dios y en agradecimiento a nuestros padres
+          </h3>
+          <p className="text-lg">Sonia González Cerritos</p>
+          <p className="text-lg">Sergio Pérez Orduña</p>
+          <p className="text-lg mt-1">Josefina González Reyes</p>
+          <p className="text-lg">Florencio Rendón Hernández</p>
         </FadeIn>
       </section>
 
