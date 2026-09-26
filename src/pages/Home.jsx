@@ -359,7 +359,12 @@ export default function Home() {
 
       {/* pases reservados */}
       {guest && (
-        <section className="py-16 px-6 text-center max-w-md mx-auto">
+        <section className="relative overflow-hidden py-16 px-6 text-center max-w-md mx-auto">
+        <img
+          src={florAbajo}
+          alt=""
+          className="absolute -top-10 -right-14 w-48 md:w-60 pointer-events-none select-none z-0"
+        />
           <FadeIn>
             <p className="text-4xl text-[#aa5532] mb-3" style={{ fontFamily: "Great Vibes" }}>Hemos reservado</p>
             <p className="text-8xl my-2 text-[#523324]" style={{ fontFamily: "Great Vibes" }}>{guest.guests_allowed}</p>
