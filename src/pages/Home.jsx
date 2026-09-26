@@ -158,9 +158,15 @@ export default function Home() {
       </section>
 
       {/* fecha grande */}
-      <section className="py-14 px-6 text-center max-w-md mx-auto">
+      <section className="relative overflow-hidden py-14 px-6 text-center max-w-md mx-auto">
+        <img
+          src={florAbajo}
+          alt=""
+          className="absolute -bottom-10 -right-14 w-48 md:w-60 pointer-events-none select-none z-0"
+        />
+
         <FadeIn>
-          <div className="flex items-center justify-center gap-6">
+          <div className="relative z-10 flex items-center justify-center gap-6">
             <div>
               <h3 className="text-sm tracking-widest text-[#523324]">NOVIEMBRE</h3>
               <h3 className="text-9xl text-[#a74e2a] font-serif leading-none">21</h3>
@@ -173,11 +179,6 @@ export default function Home() {
             </div>
           </div>
         </FadeIn>
-        <img
-            src={florAbajo}
-            alt=""
-            className="absolute -top-10 -right-14 w-48 md:w-60 pointer-events-none select-none"
-          />
       </section>
 
       {/* ceremonia */}
