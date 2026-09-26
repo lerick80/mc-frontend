@@ -172,12 +172,12 @@ export default function Home() {
               <p className="text-xs tracking-widest text-[#a74e2a] mt-1">P.M.</p>
             </div>
           </div>
-          <img
+        </FadeIn>
+        <img
             src={florAbajo}
             alt=""
             className="absolute -top-10 -right-14 w-48 md:w-60 pointer-events-none select-none"
           />
-        </FadeIn>
       </section>
 
       {/* ceremonia */}
