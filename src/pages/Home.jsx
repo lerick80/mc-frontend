@@ -23,6 +23,7 @@ import foto4 from "../images/CarlosMagali4.jpg";
 import foto5 from "../images/CarlosMagali5.jpg";
 
 import florArriba from "../images/flowers_up.png";
+import florAbajo from "../images/flowers_up.png";
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -171,6 +172,11 @@ export default function Home() {
               <p className="text-xs tracking-widest text-[#a74e2a] mt-1">P.M.</p>
             </div>
           </div>
+          <img
+            src={florAbajo}
+            alt=""
+            className="absolute -top-10 -right-14 w-48 md:w-60 pointer-events-none select-none"
+          />
         </FadeIn>
       </section>
 
