@@ -212,7 +212,12 @@ export default function Home() {
       {/* Falta agregar la imágen*/}
 
       {/* itinerario */}
-      <section id="itinerario" className="py-20 px-6 max-w-md mx-auto relative">
+      <section id="itinerario" className="relative overflow-hidden py-20 px-6 max-w-md mx-auto relative">
+        <img
+          src={florArriba}
+          alt=""
+          className="absolute -top-10 -left-14 w-48 md:w-60 pointer-events-none select-none"
+        />
         <FadeIn>
           <h2 className="text-4xl text-[#aa5532] mb-12 text-center" style={{ fontFamily: "Great Vibes" }}>Itinerario</h2>
 
