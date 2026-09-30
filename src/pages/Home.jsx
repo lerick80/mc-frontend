@@ -9,7 +9,7 @@ import church from "../images/church2.png";
 import cheers from "../images/cheers.png";
 import vestimenta from "../images/vestimenta.png";
 import whatsapp from "../images/whatsapp.png"
-import cancion from "../images/musica.mp3";
+import cancion from "../images/musica2.mp3";
 
 import anillos from "../images/anillos.png";
 import drink from "../images/drink.png";
