@@ -69,31 +69,43 @@ export default function Admin() {
   const totalConfirmed = guests.reduce((a, b) => a + b.guests_confirmed, 0);
 
   return (
-    <div className="p-6 bg-neutral-100 min-h-screen">
-      <h1 className="text-4xl text-center mb-6" style={{ fontFamily: "Great Vibes" }}>Control de Invitados</h1>
+    <div className="p-6 bg-[#f9f3ed] min-h-screen">
+      <h1 className="text-4xl text-[#aa5532] text-center mb-6" style={{ fontFamily: "Great Vibes" }}>Control de Invitados</h1>
 
-      <div className="bg-white p-6 rounded-xl shadow mb-6 text-center">
-        <h2 className="mb-4">Nuevo invitado</h2>
+      <div className="mt-8 grid grid-cols-2 gap-4 max-w-md mx-auto"style={{ fontFamily: "Cormorant Garamond" }}>
+        <div className="bg-white shadow p-4 text-center">
+          <p className="text-5xl">{totalAssigned}</p>
+          <p className="text-s text-[#aa5532]">Boletos asignados</p>
+        </div>
+        <div className="bg-white shadow p-4 text-center">
+          <p className="text-5xl text-[#408029]">{totalConfirmed}</p>
+          <p className="text-s text-[#aa5532]">Confirmados</p>
+        </div>
+      </div>
+      <br/>
+
+      <div className="bg-white p-6 w-150 mx-auto rounded-xl shadow mb-6 text-center"style={{ fontFamily: "Cormorant Garamond" }}>
+        <h2 className="mb-4 text-xl text-[#aa5532]">Nueva Invitación</h2>
         <div className="flex justify-center gap-3 flex-wrap">
-          <input placeholder="Nombre" value={newName} onChange={(e) => setNewName(e.target.value)} className="border p-2" />
-          <input type="number" value={newGuests} onChange={(e) => setNewGuests(e.target.value)} className="border p-2 w-24" />
-          <button onClick={handleCreateGuest} className="bg-black text-white px-4 py-2">Crear</button>
+          <input placeholder="Nombre" value={newName} onChange={(e) => setNewName(e.target.value)} className="border-[#aa5532] text-black text-xl border p-2"/>
+          <input type="number" value={newGuests} onChange={(e) => setNewGuests(e.target.value)} className="border-[#aa5532] text-black text-xl text-center border p-2 w-24"/>
+          <button onClick={handleCreateGuest} className="bg-[#aa5532] text-white px-4 py-2">Crear</button>
         </div>
       </div>
 
-      <div className="flex justify-center gap-4 mb-4 flex-wrap">
-        <select onChange={(e) => setFilter(e.target.value)} className="border p-2">
+      <div className="flex justify-center gap-4 mb-4 flex-wrap"style={{ fontFamily: "Cormorant Garamond" }}>
+        <select onChange={(e) => setFilter(e.target.value)} className="border-[#aa5532] border p-2">
           <option value="all">Todos</option>
           <option value="confirmed">Confirmados</option>
           <option value="pending">Pendientes</option>
         </select>
-        <input placeholder="Buscar" onChange={(e) => setSearch(e.target.value)} className="border p-2" />
-        <button onClick={handleExport} className="bg-green-600 text-white px-4 py-2">Exportar Excel</button>
+        <input placeholder="Buscar" onChange={(e) => setSearch(e.target.value)} className="border-[#aa5532] border p-2" />
+        <button onClick={handleExport} className="bg-[#408029] text-white px-4 py-2">Exportar Excel</button>
       </div>
 
-      <div className="bg-white rounded-xl shadow overflow-auto">
+      <div className="bg-white rounded-xl shadow overflow-auto"style={{ fontFamily: "Cormorant Garamond" }}>
         <table className="w-full text-center">
-          <thead className="bg-black text-white">
+          <thead className="bg-[#aa5532] text-white">
             <tr>
               <th className="p-3">Nombre</th><th>Código</th><th>Asignados</th><th>Confirmados</th><th>Invitados</th><th>Acciones</th>
             </tr>
@@ -124,16 +136,7 @@ export default function Admin() {
         </table>
       </div>
 
-      <div className="mt-8 grid grid-cols-2 gap-4 max-w-md mx-auto">
-        <div className="bg-white shadow p-4 text-center">
-          <p className="text-2xl">{totalAssigned}</p>
-          <p className="text-sm text-gray-500">Boletos asignados</p>
-        </div>
-        <div className="bg-white shadow p-4 text-center">
-          <p className="text-2xl text-green-600">{totalConfirmed}</p>
-          <p className="text-sm text-gray-500">Confirmados</p>
-        </div>
-      </div>
+
     </div>
   );
 }
