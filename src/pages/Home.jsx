@@ -83,7 +83,7 @@ export default function Home() {
                   </p>*/}
 
             <h1 className="text-6xl text-[#f9f3ed]  md:text-7xl" style={{ fontFamily: "Great Vibes" }}>
-              Magali & Carlos
+              Magali & Carlos Alberto
             </h1>
 
             {/*<p className="mt-4 text-sm">
@@ -402,7 +402,7 @@ export default function Home() {
       </section>
 
       <footer className="py-10 text-center">
-        <p className="text-3xl text-[#aa5532]" style={{ fontFamily: "Great Vibes" }}>Magali & Carlos</p>
+        <p className="text-3xl text-[#aa5532]" style={{ fontFamily: "Great Vibes" }}>Magali & Carlos Alberto</p>
         <p className="mt-4 text-xs text-[#a98b5f]">© Powered by Erick LG</p>
       </footer>
 
