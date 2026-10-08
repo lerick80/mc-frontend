@@ -21,6 +21,7 @@ import foto2 from "../images/CarlosMagali2.jpg";
 import foto3 from "../images/CarlosMagali3.jpg";
 import foto4 from "../images/CarlosMagali4.jpg";
 import foto5 from "../images/CarlosMagali5.jpg";
+import foto6 from "../images/CarlosMagali6.jpg";
 
 import florArriba from "../images/flowers_up.png";
 import florAbajo from "../images/flowers_down.png";
@@ -33,7 +34,7 @@ export default function Home() {
   const [openGifts, setOpenGifts] = useState(false);
   const [opened, setOpened] = useState(false);
   const [guest, setGuest] = useState(null);
-  const fotos = [foto1, foto2, foto3, foto4, foto5];
+  const fotos = [foto2, foto3, foto4, foto5, foto6];
   const audioRef = useRef(null);
   const [sonando, setSonando] = useState(true);
 
@@ -316,7 +317,7 @@ export default function Home() {
           <h2 className="text-4xl text-[#aa5532] mb-3" style={{ fontFamily: "Great Vibes" }}>Vestimenta</h2>
           <img src={vestimenta} alt="cheers" className="w-20 h-auto mx-auto mb-3" />
           <p className="text-2xl text-[#523324]">Formal</p>
-          <p className="text-[#523324] mt-2">Se reservan los colores blanco, beige y rojo para los novios.</p>
+          <p className="text-[#523324] mt-2">Se reservan los colores blanco, beige, rojo y verde olivo para los novios.</p>
         </FadeIn>
       </section>
 
