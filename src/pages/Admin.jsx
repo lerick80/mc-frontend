@@ -145,7 +145,7 @@ export default function Admin() {
       </div>
 
       {mostrarToast && (
-        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-black text-white text-sm px-5 py-3 rounded-full shadow-lg z-50">
+        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-[#aa5532] text-white text-sm px-5 py-3 rounded-full shadow-lg z-50">
           Link copiado
         </div>
       )}
