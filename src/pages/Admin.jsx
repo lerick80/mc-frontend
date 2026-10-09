@@ -16,7 +16,7 @@ export default function Admin() {
   const [newName, setNewName] = useState("");
   const [newGuests, setNewGuests] = useState(1);
 
-  const [copiadoId, setCopiadoId] = useState(null);
+  const [mostrarToast, setMostrarToast] = useState(false);
 
   const token = localStorage.getItem("token");
 
@@ -59,10 +59,10 @@ export default function Admin() {
     link.click();
   };
 
-  const handleCopyLink = (code, id) => {
+  const handleCopyLink = (code) => {
     navigator.clipboard.writeText(`${FRONT}/?code=${code}`);
-    setCopiadoId(id);
-    setTimeout(() => setCopiadoId(null), 1500);
+    setMostrarToast(true);
+    setTimeout(() => setMostrarToast(false), 1800);
   };
 
   const filteredGuests = guests
@@ -135,9 +135,7 @@ export default function Admin() {
                   ) : (
                     <button onClick={() => { setEditingId(g.id); setEditName(g.name); setEditGuests(g.guests_allowed); }} className="text-yellow-600">Editar</button>
                   )}
-                  <button onClick={() => handleCopyLink(g.code, g.id)} className="text-blue-600 underline">
-                    {copiadoId === g.id ? "¡Copiado!" : "Link"}
-                  </button>
+                  <button onClick={() => handleCopyLink(g.code)} className="text-blue-600 underline">Link</button>
                   <button onClick={() => handleDelete(g.id)} className="text-red-600">Eliminar</button>
                 </td>
               </tr>
@@ -145,6 +143,12 @@ export default function Admin() {
           </tbody>
         </table>
       </div>
+
+      {mostrarToast && (
+        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-black text-white text-sm px-5 py-3 rounded-full shadow-lg z-50">
+          Link copiado
+        </div>
+      )}
     </div>
   );
 }
