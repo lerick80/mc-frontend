@@ -70,7 +70,7 @@ export default function Home() {
       {/* hero */}
       <section
         id="inicio"
-        className="h-screen bg-cover bg-center flex items-center justify-center text-white relative"
+        className="h-screen bg-cover bg-center flex items-start justify-center text-white relative pt-24"
         style={{
           backgroundImage: `url(${fondo})`,
         }}
@@ -79,20 +79,9 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/50"></div>
         <FadeIn>
           <div className="relative text-center px-4">
-            {/*<p className="tracking-widest text-sm mb-2">
-                    ¡NOS CASAMOS!
-                  </p>*/}
-
-            <h1 className="text-6xl text-[#f9f3ed]  md:text-7xl" style={{ fontFamily: "Great Vibes" }}>
-              Magali & Carlos Alberto
+            <h1 className="text-6xl text-[#f9f3ed] md:text-7xl leading-tight" style={{ fontFamily: "Great Vibes" }}>
+              Magali<br />& Carlos Alberto
             </h1>
-
-            {/*<p className="mt-4 text-sm">
-                    ESTAMOS MUY FELICES DE INVITARTE A NUESTRA BODA
-                  </p>
-                  <p className="mt-4 text-sm">
-                    27 Junio 2026
-                  </p>*/}
           </div>
         </FadeIn>
       </section>
@@ -361,11 +350,11 @@ export default function Home() {
       {/* pases reservados */}
       {guest && (
         <section className="relative overflow-hidden py-16 px-6 text-center max-w-md mx-auto">
-        <img
-          src={florAbajo}
-          alt=""
-          className="absolute -top-10 -right-14 w-48 md:w-60 pointer-events-none select-none z-0"
-        />
+          <img
+            src={florAbajo}
+            alt=""
+            className="absolute -top-10 -right-14 w-48 md:w-60 pointer-events-none select-none z-0"
+          />
           <FadeIn>
             <p className="text-4xl text-[#aa5532] mb-3" style={{ fontFamily: "Great Vibes" }}>Hemos reservado</p>
             <p className="text-8xl my-2 text-[#523324]" style={{ fontFamily: "Great Vibes" }}>{guest.guests_allowed}</p>
