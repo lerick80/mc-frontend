@@ -16,6 +16,8 @@ export default function Admin() {
   const [newName, setNewName] = useState("");
   const [newGuests, setNewGuests] = useState(1);
 
+  const [copiadoId, setCopiadoId] = useState(null);
+
   const token = localStorage.getItem("token");
 
   useEffect(() => {
@@ -57,6 +59,12 @@ export default function Admin() {
     link.click();
   };
 
+  const handleCopyLink = (code, id) => {
+    navigator.clipboard.writeText(`${FRONT}/?code=${code}`);
+    setCopiadoId(id);
+    setTimeout(() => setCopiadoId(null), 1500);
+  };
+
   const filteredGuests = guests
     .filter((g) => {
       if (filter === "confirmed") return g.guests_confirmed > 0;
@@ -72,7 +80,7 @@ export default function Admin() {
     <div className="p-6 bg-[#f9f3ed] min-h-screen">
       <h1 className="text-4xl text-[#aa5532] text-center mb-6" style={{ fontFamily: "Great Vibes" }}>Control de Invitados</h1>
 
-      <div className="mt-8 grid grid-cols-2 gap-4 max-w-md mx-auto"style={{ fontFamily: "Cormorant Garamond" }}>
+      <div className="mt-8 grid grid-cols-2 gap-4 max-w-md mx-auto" style={{ fontFamily: "Cormorant Garamond" }}>
         <div className="bg-white shadow p-4 text-center">
           <p className="text-5xl">{totalAssigned}</p>
           <p className="text-s text-[#aa5532]">Boletos asignados</p>
@@ -82,18 +90,18 @@ export default function Admin() {
           <p className="text-s text-[#aa5532]">Confirmados</p>
         </div>
       </div>
-      <br/>
+      <br />
 
-      <div className="bg-white p-6 w-150 mx-auto rounded-xl shadow mb-6 text-center"style={{ fontFamily: "Cormorant Garamond" }}>
+      <div className="bg-white p-6 w-150 mx-auto rounded-xl shadow mb-6 text-center" style={{ fontFamily: "Cormorant Garamond" }}>
         <h2 className="mb-4 text-xl text-[#aa5532]">Nueva Invitación</h2>
         <div className="flex justify-center gap-3 flex-wrap">
-          <input placeholder="Nombre" value={newName} onChange={(e) => setNewName(e.target.value)} className="border-[#aa5532] text-black text-xl border p-2"/>
-          <input type="number" value={newGuests} onChange={(e) => setNewGuests(e.target.value)} className="border-[#aa5532] text-black text-xl text-center border p-2 w-24"/>
+          <input placeholder="Nombre" value={newName} onChange={(e) => setNewName(e.target.value)} className="border-[#aa5532] text-black text-xl border p-2" />
+          <input type="number" value={newGuests} onChange={(e) => setNewGuests(e.target.value)} className="border-[#aa5532] text-black text-xl text-center border p-2 w-24" />
           <button onClick={handleCreateGuest} className="bg-[#aa5532] text-white px-4 py-2">Crear</button>
         </div>
       </div>
 
-      <div className="flex justify-center gap-4 mb-4 flex-wrap"style={{ fontFamily: "Cormorant Garamond" }}>
+      <div className="flex justify-center gap-4 mb-4 flex-wrap" style={{ fontFamily: "Cormorant Garamond" }}>
         <select onChange={(e) => setFilter(e.target.value)} className="border-[#aa5532] border p-2">
           <option value="all">Todos</option>
           <option value="confirmed">Confirmados</option>
@@ -103,7 +111,7 @@ export default function Admin() {
         <button onClick={handleExport} className="bg-[#408029] text-white px-4 py-2">Exportar Excel</button>
       </div>
 
-      <div className="bg-white rounded-xl shadow overflow-auto"style={{ fontFamily: "Cormorant Garamond" }}>
+      <div className="bg-white rounded-xl shadow overflow-auto" style={{ fontFamily: "Cormorant Garamond" }}>
         <table className="w-full text-center">
           <thead className="bg-[#aa5532] text-white">
             <tr>
@@ -127,7 +135,9 @@ export default function Admin() {
                   ) : (
                     <button onClick={() => { setEditingId(g.id); setEditName(g.name); setEditGuests(g.guests_allowed); }} className="text-yellow-600">Editar</button>
                   )}
-                  <button onClick={() => navigator.clipboard.writeText(`${FRONT}/?code=${g.code}`)} className="text-blue-600 underline">Link</button>
+                  <button onClick={() => handleCopyLink(g.code, g.id)} className="text-blue-600 underline">
+                    {copiadoId === g.id ? "¡Copiado!" : "Link"}
+                  </button>
                   <button onClick={() => handleDelete(g.id)} className="text-red-600">Eliminar</button>
                 </td>
               </tr>
@@ -135,8 +145,6 @@ export default function Admin() {
           </tbody>
         </table>
       </div>
-
-
     </div>
   );
 }
