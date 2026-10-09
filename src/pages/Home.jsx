@@ -43,7 +43,7 @@ export default function Home() {
   useEffect(() => {
     const t = setInterval(() => {
       setFotoActual((i) => (i === fotos.length - 1 ? 0 : i + 1));
-    }, 5000);
+    }, 4500);
     return () => clearInterval(t);
   }, []);
 
@@ -70,7 +70,7 @@ export default function Home() {
       {/* hero */}
       <section
         id="inicio"
-        className="h-screen bg-cover bg-center flex items-start justify-center text-white relative pt-24"
+        className="h-screen bg-cover bg-center flex items-start justify-center text-white relative pt-20"
         style={{
           backgroundImage: `url(${fondo})`,
         }}
