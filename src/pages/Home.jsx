@@ -70,7 +70,7 @@ export default function Home() {
       {/* hero */}
       <section
         id="inicio"
-        className="h-screen bg-cover bg-center flex items-start justify-center text-white relative pt-10"
+        className="h-screen bg-cover bg-center flex items-start justify-center text-white relative pt-8"
         style={{
           backgroundImage: `url(${fondo})`,
         }}
