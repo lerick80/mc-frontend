@@ -43,7 +43,7 @@ export default function Home() {
   useEffect(() => {
     const t = setInterval(() => {
       setFotoActual((i) => (i === fotos.length - 1 ? 0 : i + 1));
-    }, 3500);
+    }, 5000);
     return () => clearInterval(t);
   }, []);
 
@@ -80,7 +80,7 @@ export default function Home() {
         <FadeIn>
           <div className="relative text-center px-4">
             <h1 className="text-6xl text-[#f9f3ed] md:text-7xl leading-tight" style={{ fontFamily: "Great Vibes" }}>
-              Magali<br />& Carlos Alberto
+              Magali<br />& <br />Carlos Alberto
             </h1>
           </div>
         </FadeIn>
