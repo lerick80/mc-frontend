@@ -385,7 +385,7 @@ export default function Home() {
             Para más información o dudas acerca del evento, podrás comunicarte al siguiente número:
           </p>
           <br />
-          <a href="https://wa.me/7224981180" target="_blank" rel="noopener noreferrer" className="inline-block" >
+          <a href="https://wa.me/7294033641" target="_blank" rel="noopener noreferrer" className="inline-block" >
             <img src={whatsapp} alt="WhatsApp" className="w-16 h-16" />
           </a>
         </FadeIn>
