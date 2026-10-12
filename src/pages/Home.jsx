@@ -370,7 +370,7 @@ export default function Home() {
       <section id="rsvp" className="py-12 px-6 text-center max-w-md mx-auto">
         <FadeIn>
           <h2 className="text-4xl text-[#aa5532] mb-4" style={{ fontFamily: "Great Vibes" }}>Confirma tu asistencia</h2>
-          <p className="text-[#523324] mb-6 text-s">Nos complacerá tu confirmación antes del 31 de Octubre 2026.</p>
+          <p className="text-[#523324] text-bold mb-6 text-xl">Nos complacerá tu confirmación antes del 31 de Octubre 2026.</p>
           <Link to={`/rsvp?code=${code}`} className="inline-block bg-[#aa5532] text-white px-8 py-3 rounded-full text-sm tracking-widest uppercase">
             Confirmar asistencia
           </Link>
